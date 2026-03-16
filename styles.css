@@ -1,0 +1,164 @@
+:root {
+  --green-dark: #1f6f43;
+  --green-mid: #2e8b57;
+  --green-light: #e9f7ef;
+  --text: #1f2d24;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: var(--text);
+  background: #f7fcf9;
+}
+
+header {
+  background: var(--green-dark);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+}
+
+.container {
+  width: min(1000px, 92%);
+  margin: 0 auto;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 6px;
+}
+
+nav a:hover,
+nav a.active {
+  background: var(--green-mid);
+}
+
+.hero {
+  background: var(--green-light);
+  border: 1px solid #c9e9d6;
+  border-radius: 10px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.hero.small {
+  padding: 18px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 8px;
+  background: var(--green-mid);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--green-dark);
+}
+
+.btn.secondary {
+  background: #4da36f;
+}
+
+.grid-2,
+.grid-3 {
+  display: grid;
+  gap: 16px;
+  margin: 20px 0;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid #d9ebdf;
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.banner {
+  background: #dff3e6;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 30px 0;
+}
+
+.benefits {
+  background: var(--white);
+  border: 1px solid #d9ebdf;
+  border-radius: 10px;
+  padding: 16px 20px;
+}
+
+form {
+  display: grid;
+  gap: 10px;
+}
+
+input,
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #b8d6c4;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+select[multiple] {
+  min-height: 120px;
+}
+
+.feedback {
+  margin-top: 12px;
+  font-weight: bold;
+  color: var(--green-dark);
+}
+
+footer {
+  margin-top: 30px;
+  text-align: center;
+  padding: 16px;
+  background: var(--green-dark);
+  color: var(--white);
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

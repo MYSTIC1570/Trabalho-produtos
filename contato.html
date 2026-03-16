@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoLar Limpeza | Contato</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="container topbar">
+      <h1>EcoLar Limpeza</h1>
+      <nav>
+        <a href="index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="servicos.html">Serviços</a>
+        <a href="produtos.html">Produtos</a>
+        <a href="contato.html" class="active">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero small">
+      <h2>Formulário de captação de clientes</h2>
+      <p>Preencha seus dados e selecione os interesses desejados.</p>
+    </section>
+
+    <section class="card">
+      <form id="captacaoForm">
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" required>
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="tel" required>
+
+        <label for="interesses">Interesses (pode selecionar múltiplos)</label>
+        <select id="interesses" name="interesses" multiple required>
+          <option value="limpeza-residencial">Limpeza residencial</option>
+          <option value="limpeza-jardim">Limpeza e manutenção de jardim</option>
+          <option value="aromas-naturais">Instalação de cheiros naturais</option>
+          <option value="plantas">Instalação de plantas decorativas</option>
+          <option value="plano-mensal">Plano mensal de limpeza</option>
+        </select>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="4" placeholder="Conte um pouco do que você precisa..."></textarea>
+
+        <button class="btn" type="submit">Enviar cadastro</button>
+      </form>
+      <p id="feedback" class="feedback" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 EcoLar Limpeza - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
